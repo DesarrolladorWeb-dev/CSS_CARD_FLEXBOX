@@ -1,0 +1,73 @@
+body{
+    /* cuando agregemos padding no afecteel ancho de nuestro elementos */
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+.contenedor{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2{
+    /* toma todo el espacio disponible */
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+h3{
+    font-family: 'Libre Baskerville' , serif ;
+    margin: 0;
+    font-weight: 700;
+}
+img{
+    /* para que las imagenes sean responsive */
+    max-width: 100%;
+}
+@media screen and (min-width: 480px) {/*cuando se menora la pantalla 2 filas*/
+    .contenido-principal{
+        display: flex;
+        /* uno debajo del otro */
+        flex-wrap: wrap;
+        /* alinear del lado izquierdo y derecho y dejar separacion */
+        justify-content: space-between;
+    }
+    .entrada {
+        /* dos entradas arriba dos a medias y dos abajo base de 50% - 10px */
+        flex: 0 1 calc(50% - 1rem);
+    }
+    
+}
+@media screen and (min-width: 760px) { /*cuando se grande la pantalla tres filas*/
+    .entrada {
+        /* dos entradas arriba dos a medias y dos abajo base de 50% - 10px */
+        flex: 0 1 calc(33% - 1rem);
+    }
+}
+.entrada{
+    margin-bottom: 1rem;
+}
+.contenido{
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.contenido span {
+    color: #c24c54;
+    
+}
+.contenido h3 {
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.4rem;
+    text-transform: uppercase;
+}
+.boton{
+    background-color: #008fd1;
+    color: #fff;
+    padding: .8rem 3rem;
+    margin-top: 1rem;
+    /* ayuda a aplicar margin */
+    display: inline-block;
+    text-decoration: none;
+}
